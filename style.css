@@ -4,6 +4,10 @@
     padding: 0px;
 }
 
-.comida-container {
-  /* Estilos para el contenedor de la lista */
+.comidas-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  background-color: #fffbed;
+  border-radius: 8px;
 }
