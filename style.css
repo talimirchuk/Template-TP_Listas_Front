@@ -6,8 +6,18 @@
 
 .comidas-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
+  
+  gap: 40px;
   background-color: #fffbed;
   border-radius: 8px;
+  margin-top: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+
+.tarjetas{
+    background-color: #f0f0f0; /* Color base */
+    border-radius: 12px;       /* Forma redondeada */
+    padding: 20px;             /* Espacio interno */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    grid-column: span 1;
 }

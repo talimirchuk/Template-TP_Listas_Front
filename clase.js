@@ -61,26 +61,22 @@ let comidas = [
     }
   ];
   
-  const comidasContainer = document.getElementById("comidasContainer");
+  const comidasContainer = document.getElementById("tarjetas");
   
-  // acumular las tarjetas de commmida
-  let tarjetas = "";
-  let i = 0;
-  
-  // ciclo recorrer cada comida
-  while (i<comidas.length) {
-    console.log(comidas[i].nombre)
-
-    tarjetas += `
-    <article class="card">
-        <h2>${comidas[i].nombre}</h2>
-        <p>${comidas[i].provincia}</p>
-        <span>${comidas[i].categoria}</span>
-    </article>
-  `;
-  
-    i++;
-    
+  function mostrarComidasConForEach(){
+    comidas.forEach( comida => {
+      tarjetas.innerHTML +=
+      `
+      <article class="card"> 
+        <h2>${comida.nombre}</h2>
+        <p>${comida.provincia}</p>
+        <span class="categoria">${comida.categoria}</span>
+        <ul>
+        ${comida.ingredientes.map(ingrediente => `<li>${ingrediente}</li>`).join('')}
+        </ul>
+      </article>
+      `
+    })
   }
-
-  comidasContainer.innerHTML = tarjetas;
+  
+  mostrarComidasConForEach();
